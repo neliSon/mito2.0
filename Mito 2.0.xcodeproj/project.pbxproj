@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1BA005D21E80A99800711537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005D11E80A99800711537 /* AppDelegate.swift */; };
-		1BA005D41E80A99800711537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005D31E80A99800711537 /* ViewController.swift */; };
+		1BA005D41E80A99800711537 /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005D31E80A99800711537 /* RoutineViewController.swift */; };
 		1BA005D71E80A99800711537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA005D51E80A99800711537 /* Main.storyboard */; };
 		1BA005D91E80A99800711537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA005D81E80A99800711537 /* Assets.xcassets */; };
 		1BA005DC1E80A99800711537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA005DA1E80A99800711537 /* LaunchScreen.storyboard */; };
+		1BA005E81E81BC4200711537 /* RoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA005E71E81BC4200711537 /* RoutineTableViewCell.swift */; };
 		581D7296B155311D9B715321 /* Pods_Mito_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A78CABAF4AF8C112B352237 /* Pods_Mito_2_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		105020D9C0708B1ED9501D8A /* Pods-Mito 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mito 2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mito 2.0/Pods-Mito 2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		1BA005CE1E80A99800711537 /* Mito 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mito 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA005D11E80A99800711537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BA005D31E80A99800711537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BA005D31E80A99800711537 /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		1BA005D61E80A99800711537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BA005D81E80A99800711537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BA005DB1E80A99800711537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BA005DD1E80A99800711537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA005E71E81BC4200711537 /* RoutineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTableViewCell.swift; sourceTree = "<group>"; };
 		2A78CABAF4AF8C112B352237 /* Pods_Mito_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mito_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1AD28AFAC347805DD874FB /* Pods-Mito 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mito 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mito 2.0/Pods-Mito 2.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 			children = (
 				1BA005D11E80A99800711537 /* AppDelegate.swift */,
 				1BA005E31E80AF5B00711537 /* View Controllers */,
+				1BA005E61E81BA4A00711537 /* Table View Cells */,
 				1BA005E51E80AFA000711537 /* Storyboards */,
 				1BA005E41E80AF8C00711537 /* Assets */,
 				1BA005DD1E80A99800711537 /* Info.plist */,
@@ -73,7 +76,7 @@
 		1BA005E31E80AF5B00711537 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1BA005D31E80A99800711537 /* ViewController.swift */,
+				1BA005D31E80A99800711537 /* RoutineViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -93,6 +96,14 @@
 				1BA005DA1E80A99800711537 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		1BA005E61E81BA4A00711537 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1BA005E71E81BC4200711537 /* RoutineTableViewCell.swift */,
+			);
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		7A924538B656D8210590AF08 /* Pods */ = {
@@ -236,7 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BA005D41E80A99800711537 /* ViewController.swift in Sources */,
+				1BA005D41E80A99800711537 /* RoutineViewController.swift in Sources */,
+				1BA005E81E81BC4200711537 /* RoutineTableViewCell.swift in Sources */,
 				1BA005D21E80A99800711537 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,11 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Create tab bar controller.
         let tabBarController = UITabBarController()
-        let tabViewController1 = ViewController()
-        let tabViewController2 = ViewController()
-        let tabViewController3 = ViewController()
-        
-        let controllers = [tabViewController1, tabViewController2, tabViewController3]
+        let tabViewController1 = RoutineViewController()
+//        let tabViewController2 = ViewController()
+//        let tabViewController3 = ViewController()
+
+        let controllers = [tabViewController1]
+//        let controllers = [tabViewController1, tabViewController2, tabViewController3]
         tabBarController.viewControllers = controllers
         window?.rootViewController = tabBarController
         
