@@ -1,5 +1,5 @@
 //
-//  RoutineTableViewCell.swift
+//  MuscleGroupTableViewCell.swift
 //  Mito 2.0
 //
 //  Created by Nelson Chow on 2017-03-21.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class RoutineTableViewCell: UITableViewCell {
+class MuscleGroupTableViewCell: UITableViewCell {
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

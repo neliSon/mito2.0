@@ -8,23 +8,24 @@
 
 import UIKit
 
-class RoutineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MuscleGroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tableView: UITableView = UITableView()
     
-    let numberOfRoutines = 3
+    let numberOfGroups = 3  // temp.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.frame = CGRect(x: 0, y: 50, width: 320, height: 200)
+        // set up table view.
         tableView.frame = self.view.frame
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.isScrollEnabled = false
+        tableView.register(MuscleGroupTableViewCell.self, forCellReuseIdentifier: "MuscleGroupCell")
         
-        tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: "RoutineCell")
-        // set table view row height as 1/3 of the table view.
-        tableView.rowHeight = tableView.frame.height / CGFloat(numberOfRoutines)
+        // set table view row height as 1/3 of the table view minus the tab bar height.
+        tableView.rowHeight = (tableView.frame.height - 40) / CGFloat(numberOfGroups)
         
         self.view.addSubview(tableView)
     }
@@ -36,12 +37,15 @@ class RoutineViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - TableViewController DataSource
     func tableView(_ tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRoutines
+        return numberOfGroups   // temp.
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:RoutineTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RoutineCell", for: indexPath) as! RoutineTableViewCell
-        // modify cell
+        let muscleGroupNames = ["Back", "Legs", "Chest"]    // temp.
+        
+        var cell:MuscleGroupTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MuscleGroupCell", for: indexPath) as! MuscleGroupTableViewCell
+        // TODO: modify cell
+        cell.textLabel?.text = muscleGroupNames[indexPath.row]
         
         return cell
     }

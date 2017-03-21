@@ -13,12 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Create tab bar controller.
         let tabBarController = UITabBarController()
-        let tabViewController1 = RoutineViewController()
+        let tabViewController1 = MuscleGroupViewController()
 //        let tabViewController2 = ViewController()
 //        let tabViewController3 = ViewController()
 
