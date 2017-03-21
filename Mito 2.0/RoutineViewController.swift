@@ -12,14 +12,19 @@ class RoutineViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     var tableView: UITableView = UITableView()
     
+    let numberOfRoutines = 3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.frame = CGRect(x: 0, y: 50, width: 320, height: 200)
+//        tableView.frame = CGRect(x: 0, y: 50, width: 320, height: 200)
+        tableView.frame = self.view.frame
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: "RoutineCell")
+        // set table view row height as 1/3 of the table view.
+        tableView.rowHeight = tableView.frame.height / CGFloat(numberOfRoutines)
         
         self.view.addSubview(tableView)
     }
@@ -28,10 +33,10 @@ class RoutineViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - TableViewController DataSource
     func tableView(_ tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return numberOfRoutines
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
