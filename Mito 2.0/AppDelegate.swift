@@ -17,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Create tab bar controller.
+        let tabBarController = UITabBarController()
+        let tabViewController1 = ViewController()
+        let tabViewController2 = ViewController()
+        let tabViewController3 = ViewController()
         
+        let controllers = [tabViewController1, tabViewController2, tabViewController3]
+        tabBarController.viewControllers = controllers
+        window?.rootViewController = tabBarController
         
         return true
     }
